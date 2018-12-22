@@ -7,6 +7,17 @@ import { Well } from "react-bootstrap";
 // json data
 const quiz = require("./quiz.json");
 
+const bgStyle = {
+  maxWidth: "50%",
+  height: 600,
+
+  alignContent: "center",
+  textAlign: "center",
+  marginLeft: "auto",
+  marginRight: "auto",
+  marginTop: 100
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,20 +44,10 @@ class App extends Component {
     return (
       <div>
         <div style={{ textAlign: "center" }}>
-          <Well
-            style={{
-              maxWidth: "50%",
-              height: 600,
-
-              alignContent: "center",
-              textAlign: "center",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginTop: 100
-            }}
-          >
-            {/* render selection then when the user selects a quiz, it renders the quiz */}
-
+          <Well style={bgStyle}>
+            {/* render selection then when the user selects a quiz, it 
+            renders the quiz, and renders result when there is a result */}
+            ,
             {!this.state.quizNumber ? (
               <Start
                 quiz={quiz}

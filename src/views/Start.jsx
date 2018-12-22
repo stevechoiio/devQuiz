@@ -1,23 +1,26 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+
+const buttonStyle = {
+  minWidth: 200,
+  marginTop: 200,
+  marginRight: 50,
+  marginLeft: 50,
+  minHeight: 100
+};
+
 class Start extends Component {
   render() {
-    const data = this.props.quiz["quizzes"];
+    const quizList = this.props.quiz["quizzes"];
 
     return (
       <div>
         <h1 style={{ margin: "50px" }}>Choose a Quiz!</h1>
         {/* renders list of quizzes from quiz.json */}
-        {data.map((title, key) => {
+        {quizList.map((title, key) => {
           return (
             <Button
-              style={{
-                minWidth: 200,
-                marginTop: 200,
-                marginRight: 50,
-                marginLeft: 50,
-                minHeight: 100
-              }}
+              style={buttonStyle}
               bsStyle="primary"
               bsSize="large"
               key={key}

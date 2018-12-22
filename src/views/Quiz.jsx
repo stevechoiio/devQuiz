@@ -6,7 +6,7 @@ class Quiz extends Component {
   state = { questionNumber: 0 };
   render() {
     {
-      console.log("your current score is:", this.props.currentScore);
+      console.log("your current score:", this.props.currentScore);
     }
     let quiz = QUIZ["quizzes"][this.props.quizNumber];
     console.log("quiz is:", quiz["title"]);
