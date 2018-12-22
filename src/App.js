@@ -24,18 +24,20 @@ class App extends Component {
     this.state = { quizNumber: false, viewResult: false, currentScore: 0 };
     this.quizHandler = this.quizHandler.bind(this);
   }
-
+  // listens for the user's quiz selection
   quizHandler(key) {
     this.setState({ quizNumber: key });
     console.log("quiznumber has changed to key #", key);
   }
+  //switch between start/result/quiz view
   viewHandler = () => {
     this.setState({ viewResult: true });
   };
-
+  // keeps track of user's score
   scoreHandler = () => {
     this.setState({ currentScore: this.state.currentScore + 1 });
   };
+  // reset
   tryAgain = () => {
     this.setState({ viewResult: false, quizNumber: false });
   };
@@ -47,7 +49,7 @@ class App extends Component {
           <Well style={bgStyle}>
             {/* render selection then when the user selects a quiz, it 
             renders the quiz, and renders result when there is a result */}
-            ,
+
             {!this.state.quizNumber ? (
               <Start
                 quiz={quiz}

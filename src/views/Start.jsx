@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 const buttonStyle = {
   minWidth: 200,
-  marginTop: 200,
+  marginTop: 100,
   marginRight: 50,
   marginLeft: 50,
   minHeight: 100
@@ -15,7 +15,11 @@ class Start extends Component {
 
     return (
       <div>
-        <h1 style={{ margin: "50px" }}>Choose a Quiz!</h1>
+        <span style={{ fontSize: "5em" }}>
+          <i className={"fas fa-question"} />
+        </span>
+        <h1 style={{ margin: "50px" }}>Answer a Quiz!</h1>
+
         {/* renders list of quizzes from quiz.json */}
         {quizList.map((title, key) => {
           return (
